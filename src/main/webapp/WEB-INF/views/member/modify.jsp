@@ -42,7 +42,7 @@
 					<li style= "list-style:none">
 					<div class="enroll">
 						<label for="member-id">아이디</label>
-						<input type="text" id="member-id" name="member-id" > <!-- 기능을 위한 id, 쿼리스트링 생성을 위한 name -->
+						<input type="text" id="member-id" name="member-id" value="${member.memberId }" > <!-- 기능을 위한 id, 쿼리스트링 생성을 위한 name -->
 					</div>				
 					</li>
 					<li style= "list-style:none">

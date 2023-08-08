@@ -36,7 +36,7 @@ public class MyInfoController extends HttpServlet {
 		Member member = service.selectOneById(memberId);
 		if(member!=null) {
 			request.setAttribute("member",member);
-			request.getRequestDispatcher("/WEB-INF/views/member/login.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/views/member/myInfo.jsp").forward(request, response);
 		}else {
 			request.setAttribute("msg", "회원 정보가 없습니다.");
 			request.setAttribute("url", "/index.jsp");
