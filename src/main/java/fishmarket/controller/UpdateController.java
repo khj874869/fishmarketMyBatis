@@ -50,7 +50,7 @@ public class UpdateController extends HttpServlet {
 		if(result > 0) {
 			response.sendRedirect("/WEB-INF/views/member/login.jsp");
 		}else {
-			request.getRequestDispatcher("/WEB-INF/views/member/myinfo.jsp").forward(request, response);
+			request.getRequestDispatcher("/myinfo.do").forward(request, response);
 		}
 	}
 

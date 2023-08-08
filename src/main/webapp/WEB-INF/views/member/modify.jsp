@@ -35,14 +35,14 @@
 	</head>
 	<body>
 		<h1>마이페이지</h1>
-		<form action="/myinfo.do"" method="post">
+		<form action="/update.do"" method="post">
 			<fieldset>
 				<legend>회원 상세 정보</legend>
 				<ul>
 					<li style= "list-style:none">
 					<div class="enroll">
 						<label for="member-id">아이디</label>
-						<input type="text" id="member-id" name="member-id" value="${member.memberId }" > <!-- 기능을 위한 id, 쿼리스트링 생성을 위한 name -->
+						<input type="text" id="member-id" name="member-id" > <!-- 기능을 위한 id, 쿼리스트링 생성을 위한 name -->
 					</div>				
 					</li>
 					<li style= "list-style:none">
@@ -53,28 +53,17 @@
 					</li>
 					<li style= "list-style:none">
 					<div class="enroll">
-						<label for="member-name" >이름</label>
-						<input type="text" id="member-name" name="member-name" value="${member.memberName }" > 
+						<label for="member-email" >이메일</label>
+						<input type="text" id="member-email" name="member-email" > 
 					</div>
 					</li>
 					<li style= "list-style:none">
 						<div class="enroll">
-						<label for="member-age">나이</label>
-						<input type="text" id="member-age" name="member-age" value="${member.memberAge }"> <!-- 기능을 위한 id, 쿼리스트링 생성을 위한 name -->
-						</div>
-					</li>
-					<li style= "list-style:none">
-						<div class="enroll">
-						<label for="member-email">이메일</label>
-						<input type="text" id="member-email" name="member-email" value="${member.memberEmail}" > <!-- 기능을 위한 id, 쿼리스트링 생성을 위한 name -->
-						</div>
-					</li>
-					<li style= "list-style:none">
-						<div class="enroll">
 						<label for="member-phone">전화번호</label>
-						<input type="text" id="member-phone" name="member-phone" value ="${member.memberPhone }">
+						<input type="text" id="member-age" name="member-phone" > <!-- 기능을 위한 id, 쿼리스트링 생성을 위한 name -->
 						</div>
-						</li>
+					</li>
+					
 					<li style= "list-style:none">
 						<div class="enroll">
 						<label for="member-address">주소</label>
@@ -82,18 +71,12 @@
 						</div>
 					</li>
 					
-					<li style= "list-style:none">
-						<div class="enroll">
-						<label for="member-date">가입날짜</label>
-						<input type="text" value="${member.memberDate}" > <!-- 기능을 위한 id, 쿼리스트링 생성을 위한 name -->
-						</div>
-					</li>
 				</ul>
 			</fieldset>
 			
-		</form>
 			<a href ="/update.do?memberId=${member.memberId }"><button type="submit">수정하기</button></a>
 			<a href="javascript:void(0)" onclick="checkDelete();"><button type="submit">탈퇴하기</button></a>
+		</form>
 		<script>
 			function checkDelete() {
 				const memberId = '${sessionScope.memberId }';
