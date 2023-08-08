@@ -32,12 +32,12 @@ public class DeleteController extends HttpServlet {
 		String memberId = request.getParameter("memberId");
 		int result = service.deleteMemeber(memberId);
 		if(result>0) {
-			response.sendRedirect("/index.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/member/login.jsp");
+			view.forward(request, response); 
 		}
 		else {
-			request.setAttribute("msg", "회원탈퇴 실패");
-			request.setAttribute("url","/index.jsp");
-			request.getRequestDispatcher("/WEB-INF/views/common/errorpage.jsp").forward(request, response);
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/member/myInfo.jsp");
+			view.forward(request, response); 
 		}
 	
 	}
@@ -46,8 +46,6 @@ public class DeleteController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-				doGet(request, response);
 		
 		
 	}

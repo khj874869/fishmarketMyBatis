@@ -33,7 +33,6 @@ public class MyInfoController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String memberId = request.getParameter("memberId");
 		MemberService service = new MemberService();
-		//SELECT FROM MEMBER_WEB WHERE MEMBER_ID = MEMBERID;
 		Member member = service.selectOneById(memberId);
 		if(member!=null) {
 			request.setAttribute("member",member);
@@ -53,7 +52,6 @@ public class MyInfoController extends HttpServlet {
 	 */
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
 
 
 	}

@@ -92,10 +92,8 @@
 			</fieldset>
 			
 		</form>
-		
 			<a href ="/update.do?memberId=${member.memberId }"><button type="submit">수정하기</button></a>
 			<a href="javascript:void(0)" onclick="checkDelete();"><button type="submit">탈퇴하기</button></a>
-	
 		<script>
 			function checkDelete() {
 				const memberId = '${sessionScope.memberId }';

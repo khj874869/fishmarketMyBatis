@@ -30,6 +30,7 @@ public class UpdateController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/views/member/modify.jsp").forward(request, response);
 	}
 
 	/**
@@ -49,7 +50,7 @@ public class UpdateController extends HttpServlet {
 		if(result > 0) {
 			response.sendRedirect("/WEB-INF/views/member/login.jsp");
 		}else {
-			request.getRequestDispatcher("/WEB-INF/views/member/login.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/views/member/myinfo.jsp").forward(request, response);
 		}
 	}
 

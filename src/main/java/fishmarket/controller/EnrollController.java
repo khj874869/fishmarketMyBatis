@@ -58,7 +58,7 @@ public class EnrollController extends HttpServlet {
 			.forward(request, response);
 			
 		}else {
-			request.getRequestDispatcher("/member/member_Registration.jsp")
+			request.getRequestDispatcher("/WEB-INF/views/member/member_Registration.jsp")
 			.forward(request, response);
 		}
 	}
