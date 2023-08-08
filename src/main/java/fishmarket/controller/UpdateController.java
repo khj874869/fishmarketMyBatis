@@ -48,7 +48,7 @@ public class UpdateController extends HttpServlet {
 		Member member = new Member(memberId, memberPw, memberEmail, memberPhone, memberAddress);
 		int result = service.updateMember(member);
 		if(result > 0) {
-			response.sendRedirect("/WEB-INF/views/member/login.jsp");
+			response.sendRedirect("/login.do");
 		}else {
 			request.getRequestDispatcher("/myinfo.do").forward(request, response);
 		}
